@@ -2,12 +2,17 @@
 % Jérôme Andrieux
 % 2014
 
+> NB: this document is both a README and a pandoc document example.
 
 LaTeX produces great looking documents but no one has the time and the nerves to use it.
+
 We use markdown everywhere, since it's easy to write but you can get decent "client ready" documents from it.
+
 Pandoc is georgeous, yet its defaults need a little customization.
 
-NB: this document is both a README and a pandoc document example.
+Workflow wise, such customizations are best shared via git.
+
+<!--more-->
 
 # Usage
 
@@ -24,25 +29,33 @@ If you update your templates, you may want to merge with your project branches. 
 
 # Requirements
 
-* pandoc
-* LaTeX (xelatex recommended)
+* [pandoc](johnmacfarlane.net/pandoc/), installed via `cabal install` but your distro may provide it as a package.
+* [LaTeX](http://www.xelatex.org/) (xelatex recommended), [texlive](https://www.tug.org/texlive/) is OK.
 * gnu make
 
-I install pandoc via `cabal install` but your distro may provide it as a package.
-
-LaTeX comes in various flavours, TeXlive is OK.
+Depending on your customizations, you may need additional LaTeX packages, fonts, etc. CTAN FTW.
 
 
-# Customization
+# Customizations
+
+This git repo just provides basic templates and a workflow whie pandoc & LaTeX do the heavylifting.
+
+You may want to change the default paper size, the language, the footer, the logo, etc. To do so:
 
 * change your logo in `images/logo.png`
 * change the `default.latex` document to your convenience
+* propagate your changes to your project branches
 
 
-# Tips
+# Tips on working with pandoc files
+
+[Pandoc](johnmacfarlane.net/pandoc/) is basically markdown, with support for github flavored extensions and many others, such as tables, syntax highlighting, etc.
+
+Here are some [Vim](www.vim.org) plugins I use to write my documents.
 
 | vim                                                             | is the editor I and my colleagues use |
 |-----------------------------------------------------------------|---------------------------------------|
 | [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) | is awesome to create pandoc tables    |
 | [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc)          | syntax, generators, preview, ...      |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive)           | not documentation specific            |
 
