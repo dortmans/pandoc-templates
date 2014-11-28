@@ -59,3 +59,17 @@ Here are some [Vim](www.vim.org) plugins I use to write my documents.
 | [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc)          | syntax, generators, preview, ...      |
 | [vim-fugitive](https://github.com/tpope/vim-fugitive)           | not documentation specific            |
 
+...and some plugin conf...
+
+```vim
+autocmd FileType markdown TableModeEnable
+
+"pandoc syntax annoying conceal et spellcheck
+let g:pandoc#syntax#conceal#use = 0
+let g:pandoc#modules#disabled = ['spell']
+
+" make table both pandoc and github lovable
+let g:table_mode_separator = '|'
+let g:table_mode_corner = '|'
+let g:table_mode_corner_corner = '|'
+```
