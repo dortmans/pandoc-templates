@@ -4,13 +4,12 @@
 
 > NB: this document is both a README and a pandoc document example.
 
-LaTeX produces great looking documents but no one has the time and the nerves to use it.
 
-We use markdown everywhere, since it's easy to write but you can get decent "client ready" documents from it.
+[LaTeX](http://latex-project.org) produces great looking documents but no one has the time and the nerves to use it.
 
-Pandoc is georgeous, yet its defaults need a little customization.
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is omnipresent but not quite easy to get decent "client ready" documents from.
 
-Workflow wise, such customizations are best shared via git.
+[Pandoc](http://johnmacfarlane.net/pandoc/) is georgeous, yet its defaults need a little customization. Workflow wise, such customizations are best shared via [git](http://git-scm.com).
 
 <!--more-->
 
@@ -29,7 +28,7 @@ If you update your templates, you may want to merge with your project branches. 
 
 # Requirements
 
-* [pandoc](johnmacfarlane.net/pandoc/), installed via `cabal install` but your distro may provide it as a package.
+* [pandoc](http://johnmacfarlane.net/pandoc/), installed via `cabal install` but your distro may provide it as a package.
 * [LaTeX](http://www.xelatex.org/) (xelatex recommended), [texlive](https://www.tug.org/texlive/) is OK.
 * gnu make
 
@@ -49,9 +48,9 @@ You may want to change the default paper size, the language, the footer, the log
 
 # Tips on working with pandoc files
 
-[Pandoc](johnmacfarlane.net/pandoc/) is basically markdown, with support for github flavored extensions and many others, such as tables, syntax highlighting, etc.
+[Pandoc](http://johnmacfarlane.net/pandoc/) is basically markdown, with support for github flavored extensions and many others, such as tables, syntax highlighting, etc.
 
-Here are some [Vim](www.vim.org) plugins I use to write my documents.
+Here are some [Vim](http://www.vim.org) plugins I use to write my documents.
 
 | vim                                                             | is the editor I and my colleagues use |
 |-----------------------------------------------------------------|---------------------------------------|
@@ -59,7 +58,7 @@ Here are some [Vim](www.vim.org) plugins I use to write my documents.
 | [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc)          | syntax, generators, preview, ...      |
 | [vim-fugitive](https://github.com/tpope/vim-fugitive)           | not documentation specific            |
 
-...and some plugin conf...
+   ...and some plugin conf...
 
 ```vim
 autocmd FileType markdown TableModeEnable
@@ -73,3 +72,5 @@ let g:table_mode_separator = '|'
 let g:table_mode_corner = '|'
 let g:table_mode_corner_corner = '|'
 ```
+
+
